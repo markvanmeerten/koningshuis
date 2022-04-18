@@ -1,0 +1,17 @@
+@import "abstracts";
+
+.p-radiobutton {
+  &.p-radiobutton-disabled {
+    cursor: default;
+  }
+
+  .p-radiobutton-box.p-highlight {
+    border-color: $primary;
+    background: $primary;
+
+    &:not(.p-disabled):hover {
+      border-color: $primary;
+      background: $primary;
+    }
+  }
+}

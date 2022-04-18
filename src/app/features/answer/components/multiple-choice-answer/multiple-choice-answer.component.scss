@@ -1,0 +1,37 @@
+@import "abstracts";
+
+:host ::ng-deep {
+  .incorrect {
+    .p-radiobutton.p-radiobutton-disabled.p-radiobutton-checked {
+      .p-radiobutton-box.p-highlight {
+        background-color: $fail;
+        border-color: $fail;
+      }
+
+      & + label {
+        color: $fail;
+      }
+    }
+  }
+
+  .correct {
+    .p-radiobutton.p-radiobutton-disabled.p-radiobutton-checked {
+      .p-radiobutton-box.p-highlight {
+        background-color: $success;
+        border-color: $success;
+      }
+
+      & + label {
+        color: $success;
+      }
+    }
+  }
+}
+
+form {
+  padding: 0.5rem 0.25rem;
+
+  p-radiobutton {
+    padding-bottom: 0.25rem;
+  }
+}

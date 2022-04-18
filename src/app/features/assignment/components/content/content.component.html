@@ -1,0 +1,12 @@
+<div class="container"
+     *ngIf="currentStatus | isOneOf: [Status.Active, Status.Submitted]">
+  <ol>
+    <li *ngFor="let question of questions;">
+      <app-question [question]="question"></app-question>
+    </li>
+  </ol>
+</div>
+
+<div class="footer">
+  <ng-content select="[footer]"></ng-content>
+</div>

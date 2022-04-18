@@ -1,0 +1,32 @@
+<app-card-with-title *ngIf="(currentStatus$ | async) as currentStatus"
+                     [title]="title"
+                     [description]="description">
+  <app-content [questions]="currentQuestions$ | async"
+               [currentStatus]="currentStatus$ | async">
+    <ng-container footer>
+      <button pButton
+              label="Terug"
+              id="backButton"
+              (click)="onBackClick()">
+      </button>
+
+      <button *ngIf="currentStatus === AssignmentStatus.Active"
+              pButton
+              label="Inleveren"
+              (click)="onSubmitClick()">
+      </button>
+
+      <button *ngIf="currentStatus === AssignmentStatus.Submitted"
+              pButton
+              label="Opnieuw"
+              (click)="onRetryClick()">
+      </button>
+
+      <button *ngIf="currentStatus === AssignmentStatus.InActive"
+              pButton
+              label="Start Opdracht"
+              (click)="onStartClick()">
+      </button>
+    </ng-container>
+  </app-content>
+</app-card-with-title>

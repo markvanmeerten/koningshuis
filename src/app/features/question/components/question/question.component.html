@@ -1,0 +1,11 @@
+<h2>{{ question.question }}</h2>
+
+<ng-container [ngSwitch]="question.questionType">
+  <ng-template [ngSwitchCase]="(QuestionType.MultipleChoice)">
+    <app-multiple-choice-answer [question]="question | toSubType: MultipleChoiceQuestion"></app-multiple-choice-answer>
+  </ng-template>
+
+  <ng-template [ngSwitchCase]="(QuestionType.Open)">
+    <app-open-answer [question]="question | toSubType: OpenQuestion"></app-open-answer>
+  </ng-template>
+</ng-container>

@@ -1,0 +1,10 @@
+<form [formGroup]="formGroup">
+  <div *ngFor="let answer of question?.answers"
+       [ngClass]="{ 'correct': isSelectedAnswerCorrect, 'incorrect': !isSelectedAnswerCorrect}">
+    <p-radioButton [inputId]="'id_' + answer.answerId"
+                   [value]="answer.answerId"
+                   [formControlName]="controlName"
+                   [label]="answer.answer">
+    </p-radioButton>
+  </div>
+</form>

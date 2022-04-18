@@ -1,0 +1,14 @@
+@import "abstracts";
+
+ol {
+  list-style: decimal !important;
+}
+
+.container {
+  padding: 0.875rem 1.725rem;
+}
+
+.footer {
+  border-top: 1px solid $divider;
+  padding-top: 0.5rem;
+}
