@@ -7,6 +7,10 @@ const routes: Routes = [
     path: Entity.Assignment,
     loadChildren: () => import('./features/assignment/assignment.module').then((m) => m.AssignmentModule),
   },
+  {
+    path: '**',
+    redirectTo: Entity.Assignment,
+  },
 ];
 
 @NgModule({
