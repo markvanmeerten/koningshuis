@@ -5,6 +5,7 @@ import { DefaultBackgroundComponent } from '@shared/layouts/default-background/d
 import { AssignmentComponent } from './containers/assignment/assignment.component';
 import { OverviewComponent } from './containers/overview/overview.component';
 import { AssignmentResolver } from './resolvers/assignment.resolver';
+import { DomainResolver } from './resolvers/domain.resolver';
 
 const routes: Routes = [
   {
@@ -13,7 +14,8 @@ const routes: Routes = [
     children: [
       {
         path: AppRoutes.Overview,
-        component: OverviewComponent
+        component: OverviewComponent,
+        resolve: { domain: DomainResolver}
       },
       {
         path: ':id',
