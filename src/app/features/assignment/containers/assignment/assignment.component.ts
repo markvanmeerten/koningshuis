@@ -32,8 +32,8 @@ export class AssignmentComponent implements OnInit, OnDestroy {
   }
 
   public ngOnInit(): void {
-    this.title = this.route.snapshot.data['assignment'].name;
-    this.description = this.route.snapshot.data['assignment'].introText;
+    this.title = this.route.snapshot.data.assignment.name;
+    this.description = this.route.snapshot.data.assignment.introText;
 
     this.currentStatus$ = this.store.select(selectAssignmentStatus);
     this.currentQuestions$ = this.store.select(selectQuestions);
