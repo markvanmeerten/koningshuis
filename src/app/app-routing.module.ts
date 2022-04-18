@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: Entity.Assignment,
+    redirectTo: `${Entity.Assignment}/`,
   },
 ];
 
