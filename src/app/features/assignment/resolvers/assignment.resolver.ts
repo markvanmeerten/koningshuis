@@ -34,7 +34,7 @@ export class AssignmentResolver implements Resolve<Observable<Assignment>> {
   }
 
   public resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Assignment> {
-    return this.fillStore(route.params['id']).pipe(
+    return this.fillStore(route.params.id).pipe(
       first()
     )
   }
