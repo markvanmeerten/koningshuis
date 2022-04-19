@@ -1,27 +1,31 @@
-# MyApp2
+# Koningshuis
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+## Introductie
+In meerdere van onze applicaties kunnen oefeningen gemaakt worden die uit meerdere
+vragen bestaan. Bouw een Angular applicatie op basis van de volgende instructies.
 
-## Development server
+## Specificaties
+* Angular
+* Typescript
+* Het data object (onderaan) wordt via een http call opgehaald
+* Het data object wordt gebruikt om de weergave op te bouwen
+* Gegeven antwoorden worden opgeslagen in localStorage
+* Als je de pagina herlaadt worden je gegeven antwoorden weer via localStorage geladen.
+* Form validatie mag buiten beschouwing gelaten worden.
+* Opleveren via github of bitbucket, het liefst met meerdere commits.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## User Experience
 
-## Code scaffolding
+### Presentatie
+* Naam van de oefening (deze blijft in beeld)
+* Daaronder een inleidende tekst
+* Startknop (indien de oefening nog niet is gemaakt)
+* Opnieuw knop (indien je de oefening hebt ingeleverd)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Interactie
+* Na het starten van de opdracht worden de vragen getoond.
+* De twee mogelijke vraagtypes bestaan uit multiple_choice (radio selectie) en open_question (textarea).
+* Bij het invullen van de vragen worden de antwoorden direct opgeslagen.
+* Na het invullen van de vragen kan je de oefening inleveren.
+* Vervolgens zie je of je de vragen goed/ fout hebt beantwoord, de open vraag kan niet worden gevalideerd.
+* Als een oefening is ingeleverd kan je deze opnieuw maken.
